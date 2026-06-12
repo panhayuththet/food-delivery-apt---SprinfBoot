@@ -3,8 +3,7 @@ package com.example.micro.food.delivery.api.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
-
+import java.time.LocalTime;
 
 @Entity
 @Data
@@ -29,10 +28,10 @@ public class Restaurant extends BaseEntity {
     private String phoneNumber;
     private String logoUrl;
 
-    @Temporal(TemporalType.TIME)
-    private Date openTime;
-    @Temporal(TemporalType.TIME)
-    private Date closeTime;
+    //@Temporal(TemporalType.TIME)
+    private LocalTime openTime;
+    //@Temporal(TemporalType.TIME)
+    private LocalTime closeTime;
 
 
 

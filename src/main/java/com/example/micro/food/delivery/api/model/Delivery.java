@@ -3,7 +3,6 @@ package com.example.micro.food.delivery.api.model;
 import com.example.micro.food.delivery.api.enumeration.DeliveryStatus;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.Date;
 
 @Getter
@@ -22,16 +21,18 @@ public class Delivery extends BaseEntity{
     private Long id;
 
     @Temporal(TemporalType.TIME)
-    private Date pickupDate = new Date();
+    private Date pickUpTime;
 
     @Temporal(TemporalType.TIME)
-    private Date deliveryTime = new Date();
+    private Date deliveryTime;
 
     private String pickupAddress;
     private String deliveryAddress;
+    private double deliveryFee;
 
-    private Double deliveryFee;
+    @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
+
     private Long deliveryPartnerId;
     private Long orderId;
 

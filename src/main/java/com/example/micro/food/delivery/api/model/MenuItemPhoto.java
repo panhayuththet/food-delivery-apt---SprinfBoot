@@ -1,10 +1,7 @@
 package com.example.micro.food.delivery.api.model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -28,9 +25,7 @@ public class MenuItemPhoto extends BaseEntity{
     private String largeUrl;
     private String uploadedBy;
     private String status;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private MenuItem menuItem;
-
-
-
 }

@@ -4,8 +4,6 @@ import com.example.micro.food.delivery.api.enumeration.UserType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @ToString
@@ -23,7 +21,7 @@ public class UserRequest {
     private String dateOfBirth;
     private String email;
     @JsonProperty("phone_number")
-    private String phone;
+    private String phoneNumber;
     private String address;
     @JsonProperty("user_type")
     private UserType userType;
@@ -33,22 +31,8 @@ public class UserRequest {
     private DeviceRequest deviceRequest;
 
 
-    @Getter
-    @Setter
-    public static class DeviceRequest {
-        @JsonProperty("device_id")
-        private String deviceId;
-        @JsonProperty("device_type")
-        private String deviceType;
-        @JsonProperty("device_model")
-        private String deviceModel;
-        @JsonProperty("os_version")
-        private String osVersion;
-        @JsonProperty("app_version")
-        private String appVersion;
-        @JsonProperty("trust_device")
-        private boolean trustDevice;
-    }
+
+
 
 
 }

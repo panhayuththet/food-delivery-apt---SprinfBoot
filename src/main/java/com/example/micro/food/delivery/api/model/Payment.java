@@ -24,12 +24,12 @@ public class Payment extends BaseEntity {
 
     private Double amount;
 
+    @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
+    @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
-
     private String description;
-
     private Long orderId;
 
 

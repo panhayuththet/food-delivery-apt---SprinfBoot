@@ -1,6 +1,5 @@
 package com.example.micro.food.delivery.api.model;
 
-
 import com.example.micro.food.delivery.api.enumeration.NotificationChannel;
 import com.example.micro.food.delivery.api.enumeration.NotificationType;
 import jakarta.persistence.*;
@@ -24,9 +23,9 @@ public class Notification extends BaseEntity {
     private String content;
 
     private String title;
-
+    @Enumerated(EnumType.STRING)
     private NotificationType notificationType;
-
+    @Enumerated(EnumType.STRING)
     private NotificationChannel notificationChannel;
 
     private boolean read;

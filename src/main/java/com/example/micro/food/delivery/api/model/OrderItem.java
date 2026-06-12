@@ -3,8 +3,6 @@ package com.example.micro.food.delivery.api.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.ManyToAny;
-import org.springframework.jmx.export.annotation.ManagedNotification;
 
 @Entity
 @Setter

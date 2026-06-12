@@ -1,6 +1,5 @@
 package com.example.micro.food.delivery.api.model;
-
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
@@ -13,12 +12,13 @@ import java.util.Date;
 @ToString
 
 @Table(name = "tbl_device")
-public class Device extends BaseEntity{
+public class Device extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonProperty("device_id")
     private String deviceId;
     private String deviceType;
     private String deviceModel;
